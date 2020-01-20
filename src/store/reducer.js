@@ -6,11 +6,12 @@ const reducer = (state=initialState, action) => {
     const newState = {...state};
 
     switch(action.type){
-        case 'AGE_UP': 
+        case 'AGE_UP_ASYNC': 
+        console.log('reducer')
             newState.age += action.value;
             break;
         
-        case 'AGE_DOWN': 
+        case 'AGE_DOWN_ASYNC': 
             newState.age -= action.value;
             break;
     }
